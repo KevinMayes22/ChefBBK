@@ -19,11 +19,12 @@ export async function getRecipeFromChefClaude(ingredientsArr) {
     let msg;
     try {
       msg = await callAnthropic(`I have ${ingredientsString}. Please give me a recipe you'd recommend I make!`);
-      console.log('Claude replied:', msg);
+      console.log('Claude replied:', msg)
+      return msg.content[0].text
     } catch (err) {
       console.error('Error calling Anthropic:', err);
       msg = { content: [{ text: "Sorry, I couldn't generate a recipe right now." }] };
     }
-    return msg;
+    return msg.content[0].text
 }
 
