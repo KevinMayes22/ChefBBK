@@ -16,8 +16,14 @@ const callAnthropic = async (prompt) => {
 
 export async function getRecipeFromChefClaude(ingredientsArr) {
     const ingredientsString = ingredientsArr.join(", ")
-
-    msg = await callAnthropic(`I have ${ingredientsString}. Please give me a recipe you'd recommend I make!`);
+    let msg;
+    try {
+      msg = await callAnthropic(`I have ${ingredientsString}. Please give me a recipe you'd recommend I make!`);
+      console.log('Claude replied:', msg);
+    } catch (err) {
+      console.error('Error calling Anthropic:', err);
+      msg = { content: [{ text: "Sorry, I couldn't generate a recipe right now." }] };
+    }
     return msg;
 }
 
