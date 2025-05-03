@@ -12,6 +12,8 @@ const anthropic = new Anthropic({
     dangerouslyAllowBrowser: true,
 })
 
+console.log('Anthropic key:', process.env.REACT_APP_ANTHROPIC);
+
 export async function getRecipeFromChefClaude(ingredientsArr) {
     const ingredientsString = ingredientsArr.join(", ")
 
