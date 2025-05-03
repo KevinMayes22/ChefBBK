@@ -1,6 +1,6 @@
 {
-  "name": "Scrim-s06ivf6",
-  "description": "https://scrimba.com/learn-react-c0e/~0vs/s08amrvdn7/head",
+  "name": "ChefBBK",
+  "description": "ChefBBK",
   "scripts": {
     "start": "vite",
     "dev": "vite",
@@ -8,12 +8,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "react": "19.0.0-rc-8b08e99e-20240713",
-    "react-dom": "19.0.0-rc-8b08e99e-20240713",
     "@anthropic-ai/sdk": "0.27.3",
     "@huggingface/inference": "2.8.1",
-    "react-markdown": "9.0.1",
     "marked-react": "3.0.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
     "vite": "latest"
   },
   "devDependencies": {
