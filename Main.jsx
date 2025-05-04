@@ -8,6 +8,7 @@ export default function Main() {
         []
     )
     const [recipe, setRecipe] = React.useState("")
+    const recipeSection = React.useRef(null) 
 
     React.useEffect(() => {
         if (recipe !== "" && recipeSection.current !== null) {
