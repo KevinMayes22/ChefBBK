@@ -44,7 +44,11 @@ export default function Main() {
                 />
             }
 
-            {recipe && <ClaudeRecipe recipe={recipe} />}
+            {recipe && (
+                <div ref={recipeSection}> 
+                    <ClaudeRecipe recipe={recipe} />
+                </div>
+            )}
         </main>
     )
 }
